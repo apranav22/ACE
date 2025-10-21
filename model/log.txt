@@ -1035,3 +1035,4 @@ Number of params./funcs:    195/30                                   Avg. time: 
 2025-10-21 20:48:52,829 I - Iteration   #118  (128 evals):      Loss: 1.0582e-03 | RMSE Energy(low): 70.02 (24.46) meV/at | Forces(low): 212.05 (37.07) meV/A | Time/eval: 118.30 mcs/at
 2025-10-21 20:49:31,598 I - Iteration   #119  (129 evals):      Loss: 1.0567e-03 | RMSE Energy(low): 69.64 (23.82) meV/at | Forces(low): 211.97 (37.15) meV/A | Time/eval: 124.48 mcs/at
 2025-10-21 20:50:04,870 I - Iteration   #120  (130 evals):      Loss: 1.0553e-03 | RMSE Energy(low): 69.09 (23.43) meV/at | Forces(low): 211.95 (37.27) meV/A | Time/eval: 106.87 mcs/at
+2025-10-21 20:50:40,553 I - Iteration   #121  (131 evals):      Loss: 1.0542e-03 | RMSE Energy(low): 68.70 (23.13) meV/at | Forces(low): 211.93 (37.47) meV/A | Time/eval: 114.63 mcs/at
