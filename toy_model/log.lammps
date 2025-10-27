@@ -1,0 +1,63 @@
+LAMMPS (10 Sep 2025 - Development - patch_10Sep2025-28-gcb43dec206)
+units metal
+atom_style atomic
+boundary p p p
+
+# Create fcc copper box
+lattice fcc 3.615
+Lattice spacing in x,y,z = 3.615 3.615 3.615
+region box block 0 5 0 5 0 5
+create_box 1 box
+Created orthogonal box = (0 0 0) to (18.075 18.075 18.075)
+  1 by 1 by 1 MPI processor grid
+create_atoms 1 box
+Created 500 atoms
+  using lattice units in orthogonal box = (0 0 0) to (18.075 18.075 18.075)
+  create_atoms CPU = 0.000 seconds
+mass 1 63.546
+
+# Define potential
+pair_style pace
+ACE version: 2023.11.25
+Recursive evaluator is used
+pair_coeff * * output_potential.yace Cu   # replace with your actual filename
+Loading output_potential.yace
+Total number of basis functions
+	Cu: 15 (r=1) 66 (r>1)
+Mapping LAMMPS atom type #1(Cu) -> ACE species type #0
+
+# Simulation settings
+neighbor 2.0 bin
+neigh_modify delay 5
+
+velocity all create 300.0 12345 mom yes rot no dist gaussian
+
+fix 1 all nvt temp 300.0 300.0 0.1
+thermo 100
+thermo_style custom step temp pe ke etotal press
+run 1000
+Neighbor list info ...
+  update: every = 1 steps, delay = 5 steps, check = yes
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 9
+  ghost atom cutoff = 9
+  binsize = 4.5, bins = 5 5 5
+  1 neighbor lists, perpetual/occasional/extra = 1 0 0
+  (1) pair pace, perpetual
+      attributes: full, newton on
+      pair build: full/bin/atomonly
+      stencil: full/bin/3d
+      bin: standard
+Per MPI rank memory allocation (min/avg/max) = 3.576 | 3.576 | 3.576 Mbytes
+   Step          Temp          PotEng         KinEng         TotEng         Press     
+         0   300           -1849.2403      19.350244     -1829.8901      23165.817    
+       100   171.82336     -1839.4999      11.082746     -1828.4172      18879.43     
+       200   176.65182     -1836.3207      11.394186     -1824.9265      23545.352    
+       300   224.02183     -1835.1144      14.44959      -1820.6648      19142.368    
+       400   269.1075      -1833.4836      17.357652     -1816.1259      23109.372    
+       500   267.18342     -1829.1626      17.233547     -1811.929       12739.408    
+       600   2047.814      -1946.3617      132.08567     -1814.276      -344769.26    
+       700   1.431e-06     -684108.36      9.2300661e-08 -684108.36     -4.0994428e+08
+       800   8.8086736e-17 -62290.38       5.681666e-18  -62290.38      -34917008     
+ERROR: Lost atoms: original 500 current 493
+For more information see https://docs.lammps.org/err0008 (src/thermo.cpp:527)

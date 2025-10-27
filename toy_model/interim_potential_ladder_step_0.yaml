@@ -1,0 +1,46 @@
+metadata:
+  _loss: 7.148122834395132e-06
+  ace_evaluator_version: 2023.11.25
+  intermediate_time: 2025-10-19 17:53:46.241458
+  pacemaker_version: 0.2.7+172.gd1c213a
+  starttime: 2025-10-19 17:53:35.786597
+  tensorpot_version: 0+untagged.22.g1e44b25
+  user: pranavagrawal
+global:
+  DeltaSplineBins: 0.001
+species:
+  - speciesblock: Cu
+    ndensityi: 2
+    npoti: FinnisSinclairShiftedScaled
+    parameters: [1, 1, 1, 0.5]
+    rho_core_cut: 100000
+    drho_core_cut: 250
+    nradmaxi: 0
+    lmaxi: 0
+    rcutij: 7
+    dcutij: 0.01
+    NameOfCutoffFunctionij: cos
+    r_in: 0
+    delta_in: 0
+    inner_cutoff_type: distance
+    nradbaseij: 15
+    radbase: ChebExpCos
+    radparameters: [5.25]
+    radcoefficients: []
+    core-repulsion: [0, 0]
+    nbody:
+      - {type: Cu Cu, nr: [1], nl: [0], c: [-0.023359104538812389, -0.3107965046456137]}
+      - {type: Cu Cu, nr: [2], nl: [0], c: [0.46553564080561766, -0.011732589701189783]}
+      - {type: Cu Cu, nr: [3], nl: [0], c: [1.3078980525956529, 0.030369198522225607]}
+      - {type: Cu Cu, nr: [4], nl: [0], c: [1.2240590783837604, -0.039713323692737251]}
+      - {type: Cu Cu, nr: [5], nl: [0], c: [0.019307266052358728, -0.074623404482565714]}
+      - {type: Cu Cu, nr: [6], nl: [0], c: [-0.98956185949278475, -0.089830775219809006]}
+      - {type: Cu Cu, nr: [7], nl: [0], c: [-0.80243292763714946, 0.10774450712189648]}
+      - {type: Cu Cu, nr: [8], nl: [0], c: [0.34221438443126051, 0.3075513072611949]}
+      - {type: Cu Cu, nr: [9], nl: [0], c: [0.78603893349345877, 0.17329639896394633]}
+      - {type: Cu Cu, nr: [10], nl: [0], c: [9.0602745675954588e-05, -0.31294148050691151]}
+      - {type: Cu Cu, nr: [11], nl: [0], c: [-0.77126207059374952, -0.66197065438425773]}
+      - {type: Cu Cu, nr: [12], nl: [0], c: [-0.22383914090392462, -0.34400964181941118]}
+      - {type: Cu Cu, nr: [13], nl: [0], c: [0.74378370505113744, 0.33134071883823363]}
+      - {type: Cu Cu, nr: [14], nl: [0], c: [-0.41233980615030552, 0.53140560590281904]}
+      - {type: Cu Cu, nr: [15], nl: [0], c: [0.033045867390485748, -0.38373232812167929]}
